@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppliedProject4thYear.Memory;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,8 +13,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace AppliedProject4thYear
 {
@@ -36,40 +35,40 @@ namespace AppliedProject4thYear
             {
                 btnLogin.Visibility = Visibility.Visible;
             }*/
-        }
+        }//- End of MainPage()
 
         private void btnAttention_Click(object sender, RoutedEventArgs e)
         {
             //Nav Destinations not working.
             //Frame.Navigate(typeof(AttentionLevel1));
-        }
+        }//- End of btnAttention_Click
 
         private void btnProblemSolving_Click(object sender, RoutedEventArgs e)
         {
             //Nav Destinations not working.
             //this.Frame.Navigate(typeof(ProblemSolvingGames), null);
-        }
+        }//- End of btnProblemSolving_Click
 
         private void btnSpeed_Click(object sender, RoutedEventArgs e)
         {
             //Nav Destinations not working.
             //Frame.Navigate(typeof(EverythingHasAPorpoise));
-        }
+        }//- End of btnSpeed_Click
 
         private void btnMemory_Click(object sender, RoutedEventArgs e)
         {
             //Nav Destinations not working.
-            //Frame.Navigate(typeof(Memory/ShoppingList));
-        }
+            Frame.Navigate(typeof(ShoppingList));
+        }//- End of btnMemory_Click
 
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
 
-        }
+        }//- End of btnOk_Click
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
 
-        }
-    }
-}
+        }//- End of btnCancel_Click
+    }//- End of MainPage
+}//- End of AppliedProject4thYear
