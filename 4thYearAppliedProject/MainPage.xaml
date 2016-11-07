@@ -7,10 +7,45 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Image x:Name="imgMainPage" Source="Images/MainPage.png" HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="360" Margin="3,170,0,0" d:IsLocked="True" />
-        <Image x:Name="imgAttentionMainPage" Source="Images/imgAttentionMainPage.png" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="150" Margin="3,250,0,0" d:IsLocked="True" />
-        <Button x:Name="btnAttention" Opacity="0" Content="Attention" HorizontalAlignment="Left" Margin="11,176,0,0" VerticalAlignment="Top" Background="White" Click="btnAttention_Click" IsEnabled="True" Height="153" Width="171" RenderTransformOrigin="0.5,0.5"/>
-        <Button x:Name="btnProblemSolving" Content="Problem Solving" HorizontalAlignment="Left" Margin="187,166,0,0" VerticalAlignment="Top" Height="163" Width="168" Click="btnProblemSolving_Click"/>
+    <Grid Background="Beige">
+        <StackPanel Orientation="Horizontal">
+            <AppBarButton x:Name="LoginAppBarBtn" Padding="10,10,10,10" Icon="Accept" Label="Login" VerticalAlignment="Top" RenderTransformOrigin="0.49,1.495">
+                <AppBarButton.Flyout>
+                    <Flyout>
+                        <StackPanel x:Name="LoginStk" Background="Beige">
+                            <TextBlock Text="Username: " />
+                            <TextBox x:Name ="txtUsername" Text=" " />
+                            <TextBlock Text="Password: " />
+                            <TextBox x:Name="txtPassword" Text=" " />
+                            <Button x:Name="btnOk" Content="Ok" Margin="10,10,10,10" VerticalAlignment="Bottom" Background="Gray" Click="btnOk_Click" IsEnabled="True" Height="40" Width="120"/>
+                            <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Right" Margin="10,10,10,10" VerticalAlignment="Bottom" Background="Gray" Click="btnCancel_Click" IsEnabled="True" Height="40" Width="120"/>
+                        </StackPanel>
+                    </Flyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+            <AppBarButton x:Name="SignUpAppBarBtn" Padding="10,10,10,10" HorizontalAlignment="Center" Icon="Add" Label="Sign-up" VerticalAlignment="Top">
+                <AppBarButton.Flyout>
+                    <Flyout>
+                        <StackPanel x:Name="SigninStk" Background="Beige">
+                            <TextBlock Text="Username: " />
+                            <TextBox x:Name ="txtNewUsername" Text=" " />
+                            <TextBlock Text="Email: " />
+                            <TextBox x:Name="txtNewEmail" Text=" " />
+                            <TextBlock Text="Password: " />
+                            <TextBox x:Name="txtNewPassword" Text=" " />
+                            <Button x:Name="btnNewOk" Content="Ok" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Bottom" Background="Gray" Click="btnOk_Click" IsEnabled="True" Height="40" Width="120"/>
+                            <Button x:Name="btnNewCancel" Content="Cancel" HorizontalAlignment="Right" Margin="10,10,10,10" VerticalAlignment="Bottom" Background="Gray" Click="btnCancel_Click" IsEnabled="True" Height="40" Width="120"/>
+                        </StackPanel>
+                    </Flyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+        </StackPanel>
+
+        <Image x:Name="imgMainPage" Source="Images/MainPage.png" HorizontalAlignment="Center" Height="640" VerticalAlignment="Center" Width="340" Margin="10,10,10,10" d:IsLocked="True" />
+        <!--<Image x:Name="imgAttentionMainPage" Source="Images/imgAttentionMainPage.png" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="150" Margin="3,250,0,0" d:IsLocked="True" />-->
+        <Button x:Name="btnAttention" Content="Attention" HorizontalAlignment="Left" Margin="10,177,0,0" VerticalAlignment="Top" Click="btnAttention_Click" Height="149" Width="168"/>
+        <Button x:Name="btnProblemSolving" Content="Problem Solving" HorizontalAlignment="Left" Margin="183,177,0,0" VerticalAlignment="Top" Height="149" Width="167" Click="btnProblemSolving_Click"/>
+        <Button x:Name="btnSpeed" Content="Speed" HorizontalAlignment="Left" Margin="10,326,0,178" VerticalAlignment="Center" Height="136" Width="168" Click="btnSpeed_Click"/>
+        <Button x:Name="btnMemory" Content="Memory" HorizontalAlignment="Left" Margin="178,326,0,178" VerticalAlignment="Center" Height="136" Width="172" Click="btnMemory_Click"/>
     </Grid>
 </Page>

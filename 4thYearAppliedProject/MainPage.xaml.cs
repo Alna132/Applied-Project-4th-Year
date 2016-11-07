@@ -25,26 +25,50 @@ namespace AppliedProject4thYear
         public MainPage()
         {
             this.InitializeComponent();
-        }
 
-        private void btnPlay_Click(object sender, RoutedEventArgs e)
-        {
+            //btnAttention.Visibility = Visibility.Collapsed;
+            //btnProblemSolving.Visibility = Visibility.Collapsed;
+            //btnSpeed.Visibility = Visibility.Collapsed;
+            //btnMemory.Visibility = Visibility.Collapsed;
 
-        }
-
-        private void btnPlay_Click_1(object sender, RoutedEventArgs e)
-        {
-
+            /*if (btnAttention.Visibility == Visibility.Collapsed && btnProblemSolving.Visibility == Visibility.Collapsed 
+            && btnSpeed.Visibility == Visibility.Collapsed && btnMemory.Visibility == Visibility.Collapsed)
+            {
+                btnLogin.Visibility = Visibility.Visible;
+            }*/
         }
 
         private void btnAttention_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(AttentionLevel1));
+            //Nav Destinations not working.
+            //Frame.Navigate(typeof(AttentionLevel1));
         }
 
         private void btnProblemSolving_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(ProblemSolvingGames), null);
+            //Nav Destinations not working.
+            //this.Frame.Navigate(typeof(ProblemSolvingGames), null);
+        }
+
+        private void btnSpeed_Click(object sender, RoutedEventArgs e)
+        {
+            //Nav Destinations not working.
+            //Frame.Navigate(typeof(EverythingHasAPorpoise));
+        }
+
+        private void btnMemory_Click(object sender, RoutedEventArgs e)
+        {
+            //Nav Destinations not working.
+            //Frame.Navigate(typeof(Memory/ShoppingList));
+        }
+
+        private void btnOk_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }
