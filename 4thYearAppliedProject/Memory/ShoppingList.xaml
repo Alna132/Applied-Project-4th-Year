@@ -1,0 +1,97 @@
+﻿<Page
+    x:Class="AppliedProject4thYear.Memory.ShoppingList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_4thYearAppliedProject.Memory"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#CCFFFF" Offset="0"/>
+                <!-- #CCFFFF or LightBlue-->
+                <GradientStop Color="#FFCCFF" Offset="1"/>
+                <!-- #FFCCFF or Violet-->
+            </LinearGradientBrush>
+        </Grid.Background>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+            <AppBarButton x:Name="BackAppBarBtn" Padding="10,10,10,10" HorizontalAlignment="Center" Icon="Back" Label="Back" VerticalAlignment="Top" Click="BackAppBarBtn_Click" />
+            <AppBarButton x:Name="MainMenuAppBarBtn" Padding="10,10,10,10" HorizontalAlignment="Center" Icon="Home" Label="Main Menu" VerticalAlignment="Top" Click="MainMenuAppBarBtn_Click" />
+        </StackPanel>
+
+        <!--<StackPanel VerticalAlignment="Center" >
+            <Button x:Name="btnOption1" Content="Option1" HorizontalAlignment="Stretch" Click="btnOption1_Click" />
+            <Button x:Name="btnOption2" Content="Option2" HorizontalAlignment="Stretch" Click="btnOption2_Click" />
+            <Button x:Name="btnOption3" Content="Option3" HorizontalAlignment="Stretch" Click="btnOption3_Click" />
+            <Button x:Name="btnOption4" Content="Option4" HorizontalAlignment="Stretch" Click="btnOption4_Click" />
+        </StackPanel>-->
+
+        <Grid x:Name="ItemsFrame" Padding="20, 60, 20, 20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- First column of items -->
+            <Grid x:Name="Carrot" Grid.Row="0" Grid.Column="0">
+                <Image x:Name="CarrotImage" Source="Images/Carrot.png" Width="auto" Height="auto" />
+                <!--<Rectangle x:Name="CarrotRectangle" Image="Images/Carrot.png" Fill="White" Width="auto" Height="auto" Opacity="30" />-->
+            </Grid>
+            <Grid x:Name="Steak" Grid.Row="1" Grid.Column="0">
+                <Image x:Name="SteakImage" Source="Images/Steak.png" Width="auto" Height="auto" />
+                <!--<Rectangle x:Name="SteakRectangle" Image="Images/Steak.png" Fill="White" Width="auto" Height="auto" Opacity="30" />-->
+            </Grid>
+            <Grid x:Name="Milk" Grid.Row="2" Grid.Column="0">
+                <Image x:Name="MilkImage" Source="Images/Milk.png" Width="auto" Height="auto" />
+                <!--<Rectangle x:Name="MilkRectangle" Image="Images/Milk.png" Fill="White" Width="auto" Height="auto" Opacity="30" />-->
+            </Grid>
+            <Grid x:Name="Bread" Grid.Row="3" Grid.Column="0">
+                <Image x:Name="BreadImage" Source="Images/Bread.png" Width="auto" Height="auto" />
+                <!--<Rectangle x:Name="BreadRectangle" Image="Images/Bread.png" Fill="White" Width="auto" Height="auto" Opacity="30" />-->
+            </Grid>
+            <Grid x:Name="Cookies" Grid.Row="4" Grid.Column="0">
+                <Image x:Name="CookiesImage" Source="Images/Cookie.png" Width="auto" Height="auto" />
+                <!--<Rectangle x:Name="CookiesRectangle" Image="Images/Cookies.png" Fill="White" Width="auto" Height="auto" Opacity="30" />-->
+            </Grid>
+
+            <!-- Second column of items -->
+            <Grid x:Name="Juice" Grid.Row="0" Grid.Column="1">
+                <Image x:Name="JuiceImage" Source="Images/JuiceBox.png" Width="auto" Height="auto" />
+                <!--<Rectangle x:Name="JuiceRectangle" Image="Images/JuiceBox.png" Fill="White" Width="auto" Height="auto" Opacity="30" />-->
+            </Grid>
+            <Grid x:Name="Cereal" Grid.Row="1" Grid.Column="1">
+                <Image x:Name="CerealImage" Source="Images/Cereal.png" Width="auto" Height="auto" />
+                <!--<Rectangle x:Name="CerealRectangle" Image="Images/Cereal.png" Fill="White" Width="auto" Height="auto" Opacity="30" />-->
+            </Grid>
+            <Grid x:Name="Orange" Grid.Row="2" Grid.Column="1">
+                <Image x:Name="OrangeImage" Source="Images/Orange.png" Width="auto" Height="auto" />
+                <!--<Rectangle x:Name="OrangeRectangle" Image="Images/Orange.png" Fill="White" Width="auto" Height="auto" Opacity="30" />-->
+            </Grid>
+            <Grid x:Name="Pasta" Grid.Row="3" Grid.Column="1">
+                <Image x:Name="PastaImage" Source="Images/Pasta.png" Width="auto" Height="auto" />
+                <!--<Rectangle x:Name="PastaRectangle" Image="Images/Pasta.png" Fill="White" Width="auto" Height="auto" Opacity="30" />-->
+            </Grid>
+            <Grid x:Name="Chocolate" Grid.Row="4" Grid.Column="1">
+                <Image x:Name="ChocolateImage" Source="Images/Chocolate.png" Width="auto" Height="auto" />
+                <!--<Rectangle x:Name="ChocolateRectangle" Image="Images/Chocolate.png" Fill="White" Width="auto" Height="auto" Opacity="30" />-->
+            </Grid>
+        </Grid>
+
+        <Image x:Name="ShoppingListLogo" Source="Images/ShoppingListLogo.png" HorizontalAlignment="Center" Height="120" Margin="0,10,0,0" VerticalAlignment="Top" />
+        <TextBlock x:Name="txtBlkRoundNum" Padding="0,25,0,0"  Height="auto" Width="auto" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" TextAlignment="Center" VerticalAlignment="Top" FontSize="70" />
+        <TextBlock x:Name="txtBlkStart" Padding="0,25,0,0" Text="Click to Start!" Height="auto" Width="180" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="40" TextWrapping="Wrap" />
+
+        <Image x:Name="Correct" Source="Images/CheckMark.png" Opacity="100" HorizontalAlignment="Center" VerticalAlignment="Center" Height="150" />
+        <Image x:Name="Incorrect" Source="Images/XMark.png" Opacity="100" HorizontalAlignment="Center" VerticalAlignment="Center" Height="150" />
+
+    </Grid>
+</Page>

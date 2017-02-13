@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="_4thYearAppliedProject.Memory.MemoryNav"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_4thYearAppliedProject.Memory"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#FFFFDD">
+        <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                <AppBarButton x:Name="MainMenuAppBarBtn" Padding="10,10,10,10" HorizontalAlignment="Center" Icon="Home" Label="Main Menu" VerticalAlignment="Top" Click="MainMenuAppBarBtn_Click" />
+            </StackPanel>
+            <StackPanel Padding="0,50,0,0">
+                <TextBlock x:Name="tblDescription" TextWrapping="Wrap" TextAlignment="Center" Text="Please Select a game."/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Padding="0,50,0,0">
+                <Button x:Name="btnOddOneOut" Content="Odd One Out" Background="#FFCCFF" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Center" Click="btnOddOneOut_Click"/>
+                <Button x:Name="btnOnceAndNeverAgain" Content="Once And Never Again" Background="#F6D5FF" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Center" Click="btnOnceAndNeverAgain_Click"/>
+                <Button x:Name="btnSequential" Content="Sequential" Background="#ECDFFF" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Center" Click="btnSequential_Click"/>
+                <Button x:Name="btnShoppingList" Content="Shopping List" Background="#E3E8FF" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Center" Click="btnShoppingList_Click"/>
+                <Button x:Name="btnTwosAPair" Content="Twos A Pair" Background="#DAF1FF" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Center" Click="btnTwosAPair_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
