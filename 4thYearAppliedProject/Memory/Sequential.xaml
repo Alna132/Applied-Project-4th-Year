@@ -18,31 +18,31 @@
         </Grid.Background>
         <Grid.Resources>
             <Storyboard x:Name="storyboardRedRectangle" Storyboard.TargetName="redRectangle" Storyboard.TargetProperty="Opacity" Completed="storyboardRedRectangle_Completed">
-                <DoubleAnimationUsingKeyFrames Duration="0:0:0.4">
+                <DoubleAnimationUsingKeyFrames Duration="0:0:0.5">
                     <LinearDoubleKeyFrame Value="0" KeyTime="0:0:0" />
-                    <LinearDoubleKeyFrame Value="2" KeyTime="0:0:0.18" />
-                    <LinearDoubleKeyFrame Value="50" KeyTime="0:0:0.2" />
+                    <LinearDoubleKeyFrame Value="2" KeyTime="0:0:0.2" />
+                    <LinearDoubleKeyFrame Value="50" KeyTime="0:0:0.5" />
                 </DoubleAnimationUsingKeyFrames>
             </Storyboard>
             <Storyboard x:Name="storyboardBlueRectangle" Storyboard.TargetName="blueRectangle" Storyboard.TargetProperty="Opacity" Completed="storyboardBlueRectangle_Completed">
-                <DoubleAnimationUsingKeyFrames Duration="0:0:0.4">
+                <DoubleAnimationUsingKeyFrames Duration="0:0:0.5">
                     <LinearDoubleKeyFrame Value="0" KeyTime="0:0:0" />
-                    <LinearDoubleKeyFrame Value="2" KeyTime="0:0:0.18" />
-                    <LinearDoubleKeyFrame Value="50" KeyTime="0:0:0.2" />
+                    <LinearDoubleKeyFrame Value="2" KeyTime="0:0:0.2" />
+                    <LinearDoubleKeyFrame Value="50" KeyTime="0:0:0.5" />
                 </DoubleAnimationUsingKeyFrames>
             </Storyboard>
             <Storyboard x:Name="storyboardYellowRectangle" Storyboard.TargetName="yellowRectangle" Storyboard.TargetProperty="Opacity" Completed="storyboardYellowRectangle_Completed">
-                <DoubleAnimationUsingKeyFrames Duration="0:0:0.4">
+                <DoubleAnimationUsingKeyFrames Duration="0:0:0.5">
                     <LinearDoubleKeyFrame Value="0" KeyTime="0:0:0" />
-                    <LinearDoubleKeyFrame Value="2" KeyTime="0:0:0.18" />
-                    <LinearDoubleKeyFrame Value="50" KeyTime="0:0:0.2" />
+                    <LinearDoubleKeyFrame Value="2" KeyTime="0:0:0.2" />
+                    <LinearDoubleKeyFrame Value="50" KeyTime="0:0:0.5" />
                 </DoubleAnimationUsingKeyFrames>
             </Storyboard>
             <Storyboard x:Name="storyboardGreenRectangle" Storyboard.TargetName="greenRectangle" Storyboard.TargetProperty="Opacity" Completed="storyboardGreenRectangle_Completed">
-                <DoubleAnimationUsingKeyFrames Duration="0:0:0.4">
+                <DoubleAnimationUsingKeyFrames Duration="0:0:0.5">
                     <LinearDoubleKeyFrame Value="0" KeyTime="0:0:0" />
-                    <LinearDoubleKeyFrame Value="2" KeyTime="0:0:0.18" />
-                    <LinearDoubleKeyFrame Value="50" KeyTime="0:0:0.2" />
+                    <LinearDoubleKeyFrame Value="2" KeyTime="0:0:0.2" />
+                    <LinearDoubleKeyFrame Value="50" KeyTime="0:0:0.5" />
                 </DoubleAnimationUsingKeyFrames>
             </Storyboard>
 
@@ -106,9 +106,9 @@
             </Grid>
         </Grid>
 
-        <Button x:Name="btnStart" HorizontalAlignment="Center" VerticalAlignment="Center" Height="150" Width="150" Background="#FFCCFF" Click="btnStart_Click"  />
+        <Button x:Name="btnStart" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100" Width="250" Content="Click to Start!" FontSize="38" Background="#FFCCFF" Click="btnStart_Click"  />
         <!--<Ellipse HorizontalAlignment="Center" VerticalAlignment="Center" Height="200" Width="200" Fill="#FFCCFF" Tapped="txtBlkStart_Tapped" />-->
-        <TextBlock x:Name="txtBlkRoundNum" Height="auto" Width="auto" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" TextAlignment="Center" VerticalAlignment="Center" FontSize="170" Tapped="txtBlkStart_Tapped" />
-        <TextBlock x:Name="txtBlkStart" Text="Click to Start!" Height="auto" Width="180" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="38" TextWrapping="Wrap" Tapped="txtBlkStart_Tapped" />
+        <TextBlock x:Name="txtBlkRoundNum" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Text="" TextAlignment="Center" FontSize="100" />
+        <!--<TextBlock x:Name="txtBlkStart" Text="Click to Start!" Height="auto" Width="180" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="38" TextWrapping="Wrap" />-->
     </Grid>
 </Page>
