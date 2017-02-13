@@ -78,26 +78,6 @@ namespace _4thYearAppliedProject.Memory
             testCorrect(3);
         }//- End of greenRectangle_Tapped
 
-        private void storyboardRedRectangle_Completed(object sender, object e)
-        {
-
-        }//- End of storyboardRedRectangle_Completed
-
-        private void storyboardBlueRectangle_Completed(object sender, object e)
-        {
-
-        }//- End of storyboardBlueRectangle_Completed
-
-        private void storyboardYellowRectangle_Completed(object sender, object e)
-        {
-
-        }//- End of storyboardYellowRectangle_Completed
-
-        private void storyboardGreenRectangle_Completed(object sender, object e)
-        {
-
-        }//- End of storyboardGreenRectangle_Completed
-
         private async void testCorrect(int Colour)
         {
             if (playingBack)
@@ -123,6 +103,8 @@ namespace _4thYearAppliedProject.Memory
             }//- End of if
 
             txtBlkRoundNum.Text = (pattern.Count.ToString());
+            //- Could add a textBlock under the score to tell user where in the list of colours they are.
+            //- txtBlkPattern.Text = ("Item Within Pattern" + onInList.ToString());
         }//- End of testCorrect()
 
         private async void playback()
